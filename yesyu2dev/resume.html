@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
+    <link rel="stylesheet" href="src/css/resume.css">
+    <title>My Resume</title>
+</head>
+
+<header>
+    <!-- Logo-->
+    <div id="logo">
+        <a href="index.html"><img src="src/img/logo.png" alt="Logo"></a>
+    </div>
+    <!-- Logo ending-->
+</header>
+
+<body>
+    <!-- Certificates-->
+    <div class="container">
+        <div class="certificates">
+            <!-- Certificate 1-->
+            <div class="certificate" data-link="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Electronic%20Arts/a77WE3de8qrxWferQ_Electronic%20Arts_PZXmjLxdqAXg6SEZi_1695395012604_completion_certificate.pdf">
+                <img src="src/img/ea.png" alt="Certificate 1">
+                <div class="overlay">
+                    <p>Electronic Arts - Software Engineering Job Simulation</p>
+                </div>
+            </div>
+            <!-- Certificate 1 Ending-->
+
+            <!-- Certificate 2-->
+            <div class="certificate" data-link="https://www.coursera.org/account/accomplishments/certificate/CAZQG2PKBHMF">
+                <img src="src/img/meta.png" alt="Certificate 2">
+                <div class="overlay">
+                    <p>Meta - Foundations of AR</p>
+                </div>
+            </div>
+            <!-- Certificate 2 Ending-->
+
+            <!-- Certificate 3-->
+            <div class="certificate" data-link="https://academy.patika.dev/tr/certificates/d9e2d695">
+                <img src="src/img/patika.png" alt="Certificate 3">
+                <div class="overlay">
+                    <p>Patika.dev - Unity Learn Path</p>
+                </div>
+            </div>
+            <!-- Certificate 3 Ending-->
+
+            <!-- Certificate 4-->
+            <div class="certificate" data-link="https://www.coursera.org/account/accomplishments/certificate/JZW6S9VBGW32">
+                <img src="src/img/google.png" alt="Certificate 4">
+                <div class="overlay">
+                    <p>Google Daydream - Augmented Reality and ARCore</p>
+                </div>
+            </div>
+            <!-- Certificate 4 Ending-->
+
+            <!-- Certificate 5-->
+            <div class="certificate" data-link="https://www.credly.com/badges/201c08fb-fb89-4ddd-a398-122b4157736a/linked_in_profile">
+                <img src="src/img/unity.png" alt="Certificate 5">
+                <div class="overlay">
+                    <p>Unity - Essentials Pathway</p>
+                </div>
+            </div>
+            <!-- Certificate 5 Ending-->
+
+            <!-- Certificate 6-->
+            <div class="certificate" data-link="https://www.credly.com/badges/f622d40d-456b-494d-9148-71cd86006f42/linked_in_profile">
+                <img src="src/img/unity.png" alt="Certificate 6">
+                <div class="overlay">
+                    <p>Unity - Junior Programmer</p>
+                </div>
+            </div>
+            <!-- Certificate 6 Ending-->
+
+            <!-- Certificate 7-->
+            <div class="certificate" data-link="https://courses.edx.org/certificates/e1ec9cf514414c85a90af625c3088f3b">
+                <img src="src/img/Harvard.png" alt="Certificate 7">
+                <div class="overlay">
+                    <p>Harvard University - CS50</p>
+                </div>
+            </div>
+            <!-- Certificate 7 Ending-->
+
+            <!-- Certificate 8-->
+            <div class="certificate" data-link="https://courses.edx.org/certificates/e1ec9cf514414c85a90af625c3088f3b">
+                <img src="src/img/Harvard.png" alt="Certificate 7">
+                <div class="overlay">
+                    <p>Harvard University - CS50G</p>
+                </div>
+            </div>
+            <!-- Certificate 8 Ending-->
+
+            <!-- Certificate 9-->
+            <div class="certificate" data-link="https://courses.edx.org/certificates/e1ec9cf514414c85a90af625c3088f3b">
+                <img src="src/img/Harvard.png" alt="Certificate 7">
+                <div class="overlay">
+                    <p>Harvard University - Professional Certificate Program</p>
+                </div>
+            </div>
+            <!-- Certificate 9 Ending-->
+        </div>
+        <!-- Certificates Ending -->
+        
+        <!-- About me-->
+        <div class="about-me">
+            <h1>My Certificates & Resume</h1>
+            <p class="description">After graduating from Cumhuriyet Mesleki ve Teknik Anadolu Lisesi, I did not go to any university. I continue my education on Game development and VR/AR. On the one hand, I am preparing for ApplyBAU. I have been interested in game dev for about 2 years.</p>
+            <div class="additional-info">
+                <p><strong>Skills:</strong></p>
+                <ul class="skills-list">
+                    <li><strong>HTML</strong></li>
+                    <li><strong>CSS</strong></li>
+                    <li><strong>JS</strong></li>
+                    <li><strong>Unity</strong></li>
+                    <li><strong>C#</strong></li>
+                    <li><strong>C++</strong></li>
+                    <li><strong>OOP</strong></li>
+                    <li><strong>Blender</strong></li>
+                </ul>
+                <div class="contact-info">
+                    <p><strong>Contact:</strong> yasin.uslu02@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <!-- About me Ending-->
+
+        <!-- Script-->
+        <script>
+            document.querySelectorAll('.certificate').forEach(function (certificate) {
+                certificate.addEventListener('click', function () {
+                    const link = certificate.getAttribute('data-link');
+                    window.open(link, '_blank');
+                });
+            });
+        </script>
+        <!-- Script Ending-->
+</body>
+
+</html>

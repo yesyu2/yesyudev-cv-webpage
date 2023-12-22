@@ -1,0 +1,185 @@
+body 
+{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e99a62, #7e3120, #a62b19, #37220f);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+  /* Logo */
+
+#logo 
+{
+    position: fixed;
+    top: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    padding: 10px; 
+}
+
+#logo img 
+{
+    width: 100px; /* Logo width */
+    height: auto; /* Logo height is adjusted automatically */
+}
+/* Logo endings */
+  
+  
+.container 
+{
+    display: flex;
+    justify-content: center; /* Elemanları yatayda ortala */
+    align-items: center; /* Elemanları dikeyde ortala */
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+}
+  
+  .certificates {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap; /* Sertifikaların alt satıra geçmesine izin ver */
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .certificate {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.347);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
+    flex: 0 0 calc(33.33% - 20px); /* Sertifikaların genişliğini belirle */
+  }
+  
+  .certificate:hover {
+    transform: scale(1.05);
+  }
+
+  
+  .certificate img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    max-height: 90px;
+    margin: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.626);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .certificate:hover .overlay {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  
+  .about-me {
+    flex: 2;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.575);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  h1 {
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6; /* Satır yüksekliğini artırma */
+  }
+  
+  .additional-info {
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .additional-info p {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .additional-info ul {
+    padding-left: 20px;
+    background-color: rgba(255, 255, 255, 0.337);
+    border-radius: 8px; /* Köşeleri yuvarla */
+    list-style-type: none; /* Madde işaretlerini kaldır */
+    padding: 10px; /* İç boşluğu ayarla */
+  }
+  
+  .additional-info li {
+    margin-bottom: 8px; /* Her madde arasında biraz boşluk bırak */
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+      .certificates {
+      flex-direction: row; /* Logoları yatayda sırala */
+      justify-content: center; /* Logoları yatayda ortala */
+      width: auto; /* Mobilde genişlik ayarını kaldır */
+    }
+  
+    .certificate {
+      margin-bottom: 10px;
+      flex: 0 0 calc(50% - 20px);
+    }
+  
+    .about-me {
+      max-width: 100%; /* Hafif daraltma yap */
+    }
+  }
+  
+  .skills-list {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    list-style-type: none;
+    padding: 0; 
+    display: flex;
+    justify-content: center;
+  
+  }
+  
+  .skills-list li {
+    background-color: #a62b19; /* Yetenek arkaplan rengi */
+    color: #fff; /* Yazı rengi */
+    padding: 10px 15px; /* İç boşluk ayarı */
+    margin: 5px; /* Her madde arasında boşluk */
+    border-radius: 5px; /* Köşeleri yuvarla */
+    
+  }
+  
+  .contact-info {
+    background-color: rgba(255, 255, 255, 0.337); /* Kutu arkaplan rengi */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    border-radius: 8px; /* Köşeleri yuvarla */
+    padding: 15px; /* İç boşluk ayarı */
+    margin-top: 20px; /* Üstten boşluk */
+  }

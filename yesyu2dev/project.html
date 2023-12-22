@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
+    <link rel="stylesheet" href="src/css/projectstyle.css">
+    <link rel="stylesheet" href="src/css/projectcard.css">
+</head>
+<body>
+  
+
+    <header>
+      <a href="index.html">
+          <img class="logo" src="src/img/logo.png" alt="Your Logo">
+      </a>
+  </header>
+
+  <h1>My Projects</h1>
+  <!-- Card 0-->
+  <div class="card-container">
+      <div class="card">
+          <img src="src/img/project1.png" alt="Proje 1">
+          <div class="overlay">
+              <p>-yesyu.dev cv page-</p>
+              <p>The website you are viewing now (ツ) If you want to see the codes, you can click on the view project button.</p>
+              <div>
+                  <button onclick="playVideo('video1.mp4')">Video</button>
+                  <button onclick="viewProject('proje1')">View Project</button>
+              </div>
+          </div>
+      </div>
+      <!-- Card 0 Ending-->
+  
+      <!-- Card 1-->
+  <div class="card-container">
+    <div class="card">
+        <img src="src/img/eaproject.png" alt="Proje 1">
+        <div class="overlay">
+            <p>Electronic Arts Inventory system</p>
+            <div>
+                <button onclick="playVideo('video1.mp4')">Video</button>
+                <button onclick="viewProject('proje1')">View Project</button>
+            </div>
+        </div>
+    </div>
+    <!-- Card 1 Ending-->
+  
+    <!-- Card 2-->
+  <div class="card-container">
+    <div class="card">
+        <img src="src/img/eaproject.png" alt="Proje 1">
+        <div class="overlay">
+            <p>Electronic Arts Inventory system</p>
+            <div>
+                <button onclick="playVideo('video1.mp4')">Video</button>
+                <a href="https://www.edx.org/"><button>View Project</button></a>
+            </div>
+        </div>
+    </div>
+    <!-- Card 2 Ending-->
+  
+    <!-- Card 3-->
+  <div class="card-container">
+    <div class="card">
+        <img src="src/img/eaproject.png" alt="Proje 1">
+        <div class="overlay">
+            <p>Electronic Arts Inventory system</p>
+            <div>
+                <button onclick="playVideo('video1.mp4')">Video</button>
+                <button onclick="viewProject('proje1')">View Project</button>
+            </div>
+        </div>
+    </div>
+    <!-- Card 3 Ending-->
+
+    <!-- Video Player -->
+    <div id="videoModal" class="modal">
+      <div class="modal-content">
+          <span class="close" onclick="closeVideoModal()">&times;</span>
+          <video id="modalVideo" width="100%" height="100%" controls>
+              Your browser does not support the video tag.
+          </video>
+      </div>
+    </div> 
+    <!-- Video Player Ending-->
+    
+  
+      
+  </div>
+  
+  <!-- Scripts -->
+  <script>
+
+    // Video Player and Project View script
+      function openVideoModal() {
+        const videoModal = document.getElementById('videoModal');
+        videoModal.style.display = 'flex'; // flex olarak değiştirildi
+        setTimeout(function() {
+            videoModal.querySelector('.modal-content').style.transform = 'scale(1)';
+        }, 50);
+      }
+
+      function closeVideoModal() {
+        const videoModal = document.getElementById('videoModal');
+        const modalContent = videoModal.querySelector('.modal-content');
+
+        modalContent.style.transform = 'scale(0)';
+        setTimeout(function() {
+            videoModal.style.display = 'none';
+        }, 300);
+        
+        const modalVideo = document.getElementById('modalVideo');
+        modalVideo.pause();
+        modalVideo.currentTime = 0;
+        }
+
+        function playVideo(videoSrc) {
+        const modalVideo = document.getElementById('modalVideo');
+        
+        modalVideo.src = videoSrc;
+        openVideoModal();
+        modalVideo.play();
+        }
+      // Video Player and Project View script ending
+
+
+      // Project View script
+
+        function openProjectPage(projectName) {
+        window.open(`project_${projectName}.html`, '_blank');
+        }
+
+        function viewProject(projectName) {
+        // Project View 
+        console.log('View Project:', projectName);
+
+        // Open Project View
+        openProjectPage(projectName);
+        }
+  </script>
+  
+  </body>
+</body>
+</html>
